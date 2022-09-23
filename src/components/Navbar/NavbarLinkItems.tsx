@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 import { navbarDatas } from './NavbarDatas';
 
 const NavbarLinkItems = () => {
     const [showbar, setShowBar] = useState<boolean>(false);
 
-    const setIconHandler = (): void => {
+    const showBarHandler = (): void => {
         setShowBar(!showbar)
     }
 
@@ -14,18 +15,24 @@ const NavbarLinkItems = () => {
         <>
             <ul className='hidden md:flex'>
                 {
-                    navbarDatas.map((link) => (
+                    navbarDatas.map((data) => (
                         <li 
-                            key={link.id} 
+                            key={data.id} 
                             className='px-4 cursor-pointer text-gray-400 hover:text-rose-500 duration-150'
                         >
-                            { link.link }
+                            <Link 
+                                to={data.link} 
+                                smooth 
+                                duration={500}
+                            >
+                                {data.link}
+                            </Link>
                         </li>
                     ))
                 }
             </ul>
 
-            <div onClick={setIconHandler} className='cursor-pointer z-10 md:hidden'>
+            <div onClick={showBarHandler} className='cursor-pointer z-10 md:hidden'>
                 { showbar ? <FaTimes size={25}/> : <FaBars size={25}/>}
             </div>
 
@@ -35,12 +42,19 @@ const NavbarLinkItems = () => {
                     className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-slate-900 to-black'
                 >
                     {
-                        navbarDatas.map((link) => (
+                        navbarDatas.map((data) => (
                             <li 
-                                key={link.id} 
+                                key={data.id} 
                                 className='px-4 cursor-pointer text-white hover:text-rose-500 duration-150 py-6'
                             >
-                                { link.link }
+                                <Link
+                                    onClick={showBarHandler}
+                                    to={data.link}
+                                    smooth
+                                    duration={500}
+                                >
+                                    {data.link}
+                            </Link>
                             </li>
                         ))
                     }

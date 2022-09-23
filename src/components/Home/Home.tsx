@@ -2,10 +2,11 @@ import profileImg from '../../assets/hero.jpeg'
 import styles from './Home.module.css';
 
 import { MdArrowForwardIos } from 'react-icons/md';
+import { Link } from 'react-scroll';
 
 const Home = () => {
     return (
-        <div data-name='home' className='h-screen w-full bg-gradient-to-b from-slate-900 via-slate-900 to-black'>
+        <div name='Home' className='h-screen w-full bg-gradient-to-b from-slate-900 via-slate-900 to-black'>
             <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-5 md:flex-row'>
                 <div className='text-white flex flex-col justify-center h-full'>
 
@@ -25,12 +26,14 @@ const Home = () => {
                     </p>
 
                     <div className='invisible lg:visible mt-5 font-bold'>
-                        <button className={styles.button}>
-                            Portfolio
-                            <span>
-                                <MdArrowForwardIos className='ml-1 mb-0.5'/>
-                            </span>
-                        </button>
+                        <Link to='Portfolio' smooth duration={500}>
+                            <button  className={styles.button}>
+                                Portfolio
+                                <span>
+                                    <MdArrowForwardIos className='ml-1 mb-0.5'/>
+                                </span>
+                            </button>
+                        </Link>
                     </div>
 
                 </div>
