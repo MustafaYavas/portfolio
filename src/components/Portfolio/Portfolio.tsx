@@ -4,7 +4,7 @@ const Portfolio = () => {
     return (
         <div 
             name='Portfolio' 
-            className='bg-gradient-to-b from-slate-900 via-slate-900 to-black w-full text-white md:h-screen'
+            className='bg-gradient-to-b from-slate-900 via-slate-900 to-black w-full text-white h-screen'
         >
             <div className='max-w-screen-lg p-5 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className='pb-10'>

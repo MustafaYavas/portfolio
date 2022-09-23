@@ -1,7 +1,6 @@
 import kanban from '../../assets/portfolio/kanban.png';
 import movie from '../../assets/portfolio/movie.png';
 import weather from '../../assets/portfolio/weather.png';
-import conword from '../../assets/portfolio/conword.png';
 import styles from './Portfolio.module.css';
 
 const PortfolioCard = () => {
@@ -23,16 +22,11 @@ const PortfolioCard = () => {
             imgUrl: weather,
             source: 'https://github.com/MustafaYavas/TDD-project',
             live: 'https://tdd-react-weather-app.netlify.app/'
-        },
-        // {
-        //     id: 4,
-        //     imgUrl: conword,
-        //     source: 'https://github.com/MustafaYavas/ConWord'
-        // },
+        }
     ]
 
     return (
-        <div className='grid grid-cols-3 gap-8 px-10 sm:px-0'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 sm:px-0'>
             {
                 portfolios.map(port => (
                     <div key={port.id} className='shadow-lg shadow-gray-800 rounded-lg'>
@@ -44,13 +38,13 @@ const PortfolioCard = () => {
                         <div className='flex items-center justify-evenly py-5'>
                             { 
                                 port.source && 
-                                <button onClick={() => {window.open(port.source)}} className={`${styles.button}`}>
+                                <button onClick={() => {window.open(port.source)}} className={`${styles.button} w-1/2 `}>
                                     Source
                                 </button> 
                             }
                             { 
                                 port.live && 
-                                <button onClick={() => {window.open(port.live)}} className={`${styles.button}`}>
+                                <button onClick={() => {window.open(port.live)}} className={`${styles.button} w-1/3`}>
                                     Demo
                                 </button> 
                             }

@@ -8,7 +8,7 @@ const Experience = () => {
         >
             <div className='max-w-screen-lg mx-auto p-5 flex flex-col justify-center w-full h-full text-white'>
                 
-                <div className='pb-10'>
+                <div className='pb-10 mt-80 sm:mt-0'>
                     <p className='text-4xl font-bold border-b-4 border-slate-700 inline'>Experience</p>
                     <p className='py-5'>Technologies I have used so far</p>
                 </div>

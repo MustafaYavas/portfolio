@@ -67,7 +67,7 @@ const ExperienceCard = () => {
     ]
 
     return (
-        <div className='w-full grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center px-10 sm:px-0'>
+        <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center px-10 sm:px-0'>
             {
                 experiences.map(exp => (
                     <div key={exp.id} className={`${exp.style} shadow-md hover:scale-105 duration-500 py-2 rounded-lg`}>

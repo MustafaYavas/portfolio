@@ -54,7 +54,7 @@ const NavbarLinkItems = () => {
                                     duration={500}
                                 >
                                     {data.link}
-                            </Link>
+                                </Link>
                             </li>
                         ))
                     }
