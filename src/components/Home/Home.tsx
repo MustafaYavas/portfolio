@@ -4,7 +4,11 @@ import styles from './Home.module.css';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { Link } from 'react-scroll';
 
-const Home = () => {
+type HomeProps = {
+    showSideBar: boolean,
+}
+
+const Home = (props: HomeProps) => {
     return (
         <div name='Home' className='h-screen w-full bg-gradient-to-b from-black via-slate-900 to-slate-900'>
             <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-5 md:flex-row'>
@@ -26,16 +30,19 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className='mt-5 font-bold flex justify-center md:justify-start'>
-                        <Link to='About' smooth duration={500}>
-                            <button className={styles.button}>
-                                About Me
-                                <span>
-                                    <MdArrowForwardIos className='ml-1 mb-0.5'/>
-                                </span>
-                            </button>
-                        </Link>
-                    </div>
+                    {
+                        !props.showSideBar &&
+                        <div className='mt-5 font-bold flex justify-center md:justify-start'>
+                            <Link to='About' smooth duration={500}>
+                                <button className={styles.button}>
+                                    About Me
+                                    <span>
+                                        <MdArrowForwardIos className='ml-1 mb-0.5'/>
+                                    </span>
+                                </button>
+                            </Link>
+                        </div>
+                    }
 
                 </div>
 

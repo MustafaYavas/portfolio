@@ -4,11 +4,16 @@ import { Link } from 'react-scroll';
 
 import { navbarDatas } from './NavbarDatas';
 
-const NavbarLinkItems = () => {
+type NavbarLinkProps = {
+    toggleBar: (toggle: boolean) => void
+}
+
+const NavbarLinkItems = (props: NavbarLinkProps) => {
     const [showbar, setShowBar] = useState<boolean>(false);
 
     const showBarHandler = (): void => {
         setShowBar(!showbar)
+        props.toggleBar(!showbar);
     }
 
     return (

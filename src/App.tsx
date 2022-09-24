@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Social from './components/Social/Social';
@@ -8,11 +10,25 @@ import Contact from './components/Contact/Contact';
 import StartingPage from './components/Home/StartingPage';
 
 const App = () => {
+    const [showSideBar, setShowSideBar] = useState<boolean>(false);
+
+    const toggleSideBar = (toggle: boolean): void => {
+        setShowSideBar(toggle)
+    }
+
+    // const openSideBar = () => {
+    //     setShowSideBar(true);
+    // }
+
+    // const closeSideBar = () => {
+    //     setShowSideBar(false);
+    // }
+
     return (
         <div>
-            <Navbar />
-            <StartingPage />
-            <Home />
+            <Navbar toggleBar={toggleSideBar}/>
+            <StartingPage showSideBar={showSideBar}/>
+            <Home showSideBar={showSideBar} />
             <About />
             <Portfolio />
             <Experience />
