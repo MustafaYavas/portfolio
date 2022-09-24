@@ -1,3 +1,7 @@
+textarea {
+    resize: none;
+}
+
 .button {
     font-family: inherit;
     font-size: 15px;
