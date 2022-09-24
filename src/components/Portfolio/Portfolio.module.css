@@ -1,4 +1,3 @@
-
 .button {
     padding: .75rem 0;
     font-size: 12px;
@@ -19,7 +18,7 @@
     border: 1px solid rgb(244 63 94);
     color: #fff;
     transform: translateY(-7px);
-  }
+}
   
 .button:active {
     transform: translateY(-1px);

@@ -74,4 +74,4 @@ const StartingPage = (props: StartingPageProps) => {
     )
 }
 
-export default StartingPage
+export default StartingPage;
