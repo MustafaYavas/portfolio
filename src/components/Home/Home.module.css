@@ -45,17 +45,3 @@
     transition: .5s ease;
     margin-bottom: .25rem !important;
 }
-
-.main_img {
-    width: 20rem;
-    border-radius: 1.5rem;
-}
-
-@media only screen and (max-width: 767px) {
-    .main_img  {
-        width: 7rem;
-        position: absolute;
-        top: 75%;
-        right: 40%;
-    }
-}

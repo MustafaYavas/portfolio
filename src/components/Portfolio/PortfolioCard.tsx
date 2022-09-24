@@ -29,11 +29,11 @@ const PortfolioCard = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 sm:px-0'>
             {
                 portfolios.map(port => (
-                    <div key={port.id} className='shadow-lg shadow-gray-800 rounded-lg'>
+                    <div key={port.id} className='shadow-lg shadow-gray-800 rounded-lg duration-500 hover:scale-105'>
                         <img 
                             src={port.imgUrl} 
                             alt='portfolio_img'
-                            className='rounded-t-md duration-500 hover:scale-105'
+                            className='rounded-t-md '
                         />
                         <div className='flex items-center justify-evenly py-5'>
                             { 

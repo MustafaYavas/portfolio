@@ -1,8 +1,9 @@
-import profileImg from '../../assets/hero.jpg'
-import styles from './Home.module.css';
-
 import { MdArrowForwardIos } from 'react-icons/md';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
+
+import profileImg from '../../assets/hero.jpg'
+import styles from './Home.module.css';
 
 type HomeProps = {
     showSideBar: boolean,
@@ -14,7 +15,7 @@ const Home = (props: HomeProps) => {
             <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-5 md:flex-row'>
                 <div className='text-white flex flex-col justify-center '>
                     <h2 className='text-4xl sm:text-6xl font-bold text-center md:text-left'>
-                        I'm a Full Stack Developer
+                        I'm a Software Developer
                     </h2>
                     <div className='text-center md:text-left'>
                         <p className='text-slate-500 py-5 md:max-w-md'>
@@ -46,9 +47,14 @@ const Home = (props: HomeProps) => {
 
                 </div>
 
-                <div>
+                <motion.div
+                    animate={{
+                        opacity: [1, .75, .50, .75, 1],                        
+                      }}
+                      transition={{repeat: Infinity, duration: 5}}
+                >
                     <img src={profileImg} alt='profile_img' className={`rounded-3xl mx-auto w-2/3 md:w-full mt-10 md:mt-0`}/>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

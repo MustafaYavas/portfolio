@@ -70,7 +70,7 @@ const ExperienceCard = () => {
         <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center px-10 sm:px-0'>
             {
                 experiences.map(exp => (
-                    <div key={exp.id} className={`${exp.style} shadow-md hover:scale-105 duration-500 py-2 rounded-lg`}>
+                    <div key={exp.id} className={`${exp.style} shadow-md hover:scale-95 duration-200 py-2 rounded-lg`}>
                         <img src={exp.imgUrl} alt='experience_img' className='w-20 mx-auto'/>
                         <p className='mt-4'>{exp.name}</p>
                     </div>

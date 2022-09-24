@@ -7,7 +7,7 @@ import About from './components/About/About';
 import Portfolio from './components/Portfolio/Portfolio';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
-import StartingPage from './components/Home/StartingPage';
+import Intro from './components/Home/Intro';
 
 const App = () => {
     const [showSideBar, setShowSideBar] = useState<boolean>(false);
@@ -27,7 +27,7 @@ const App = () => {
     return (
         <div>
             <Navbar toggleBar={toggleSideBar}/>
-            <StartingPage showSideBar={showSideBar}/>
+            <Intro showSideBar={showSideBar}/>
             <Home showSideBar={showSideBar} />
             <About />
             <Portfolio />
