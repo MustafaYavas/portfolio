@@ -1,3 +1,3 @@
-# My Personal website
+# My Personal website :dash:
 
-Ypu can [Visit here](https://mustafa-yavas.netlify.app/).
+You can [Visit here](https://mustafa-yavas.netlify.app/).
