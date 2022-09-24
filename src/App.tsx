@@ -5,11 +5,13 @@ import About from './components/About/About';
 import Portfolio from './components/Portfolio/Portfolio';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
+import StartingPage from './components/Home/StartingPage';
 
 const App = () => {
     return (
         <div>
             <Navbar />
+            <StartingPage />
             <Home />
             <About />
             <Portfolio />
